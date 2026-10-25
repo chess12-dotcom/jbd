@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="starfield" aria-hidden="true"></canvas>
+    <main class="container">
+
+       
+        <input type="checkbox" id="open-envelope">
+
+        <div class="envelope-scene">
+
+            
+<div class="letter">
+    <div class="letter-flipper" id="letter-flipper">
+
+        <div class="letter-side letter-front">
+            <p id="letter-text-front"></p>
+        </div>
+
+        <div class="letter-side letter-back">
+            <p id="letter-text-back"></p>
+        </div>
+
+    </div>
+</div>
+
+            <label for="open-envelope"
+                   class="envelope"
+                   aria-label="Open your letter">
+
+                <div class="envelope-back"></div>
+                <div class="envelope-front"></div>
+                <div class="envelope-flap"></div>
+                <div class="envelope-seal">J</div>
+
+            </label>
+
+        </div>
+
+
+        
+
+<div class="music-widget" id="music-widget">
+
+    <button
+        class="cassette-button"
+        id="cassette-button"
+        type="button"
+        aria-label="Open birthday playlist"
+        aria-expanded="false"
+        aria-controls="playlist-window"
+    >
+        <span class="cassette">
+            <span class="cassette-label"></span>
+            <span class="cassette-reels">
+                <span class="cassette-reel"></span>
+                <span class="cassette-tape"></span>
+                <span class="cassette-reel"></span>
+            </span>
+            <span class="cassette-bottom"> 001</span>
+        </span>
+        
+    </button>
+
+    <section
+        class="playlist-window"
+        id="playlist-window"
+        aria-label="Birthday playlist"
+        hidden
+    >
+        <header class="playlist-header">
+            <div>
+                <p class="playlist-eyebrow">001</p>
+                <h2></h2>
+            </div>
+
+            <button
+                class="playlist-close"
+                id="playlist-close"
+                type="button"
+                aria-label="Close playlist"
+            >×</button>
+        </header>
+
+        
+
+        <div class="playlist-embed">
+            <iframe
+                id="spotify-embed"
+                title="Birthday Spotify playlist"
+                src="about:blank"
+                width="100%"
+                height="352"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+                style="border-radius: 8px;"
+            ></iframe>
+
+            
+        </div>
+
+        
+    </section>
+</div>
+
+
+    </main>
+
+    <script src="script.js"></script>
+
+    <div id="birthday-confetti"></div>
+</body>
+</html>
